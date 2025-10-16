@@ -36,7 +36,8 @@ Langchain has different message types that are used to capture different roles i
 
 We don't want messages to be overwritten in the state, instead we want them to append to the state so as to maintain message history. For this, we use reducers. Reducers allow us to specify how we want state updates to happen instead of just overriding. 
 
-We've built a graph with MessageState and tool calling. For this module, I added on to the multipying tool and added division, addition, and subtraction tools as well. Other than that, I added a tool to tell current date-time, as well as a tool that tells the weather in a specified location. 
+We've built a graph with MessageState and tool calling. For this module, I added on to the multipying tool and added division, addition, and subtraction tools as well. Other than that, I added a tool to tell current date-time, as well as a tool that tells the weather in a specified location that the user mentions. I have also changed the messages passed to the state. 
+
 
 
 
