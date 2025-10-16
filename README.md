@@ -1,5 +1,6 @@
-##MODULE 1
-##VIDEO 1- Motivation
+# **MODULE 1**
+
+## **VIDEO 1- Motivation**
 
 A solitary language model is fairly limited because it doesn't have access to multi-step workflows. Which is why a lot of LLM applications use a control flow with steps before and after LLM calls, like including tool calls, retrieval calls etc.
 
@@ -10,3 +11,5 @@ There are many kinds of Agents. A router is an agent that controls a single step
 Langgraph gives you a way to implement custom control flows in the form of graphs with nodes connected by edges.
 
 There was no code for this video.
+
+---
