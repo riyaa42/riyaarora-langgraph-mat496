@@ -16,6 +16,9 @@ There was no code for this video.
 
 ## **VIDEO 2- Simple Graph**
 
+[simple-graphVID2MOD1.ipynb](./simple-graphVID2MOD1)
+
+
 In this video, we built a simple graph with 3 nodes and 1 conditional edge. The first node has a conditional edge that either goes to node 2 or node 3.
 
 There are some concepts defined. A state is the object that we pass between the node and the edge. A node is basically a python function. We pass the state to the node. Each new node returns the new value of the state key and overrides the previous value. Edges connect the nodes.  
@@ -25,5 +28,8 @@ In this file, I've made a change so that the program checks the current date-tim
 
 
 
+
+
 construct a graph by defining a START node and an END node, before we invoke it.
+
 
