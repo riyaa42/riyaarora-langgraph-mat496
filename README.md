@@ -70,7 +70,7 @@ I have first defined all the tools I previously used, basic arithemetic (additio
 
 ---
 
-## **VIDEO 7- Agent**
+## **VIDEO 7- Agent Memory**
 
 [agent-memoryVID7MOD1.ipynb](./Module1/agent-memoryVID7MOD1.ipynb)
 
@@ -83,6 +83,7 @@ Langchain uses checkpointers to save the GraphState after each step. We use the 
 
 
 Here we can see it in langgraph studio where we input a question that calls some tools that I have defined and gives an output, then we ask it to do further operations on the previous output and it is able to do that with its memory.
+
 
 
 
