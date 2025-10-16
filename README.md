@@ -58,6 +58,13 @@ We've seen that a graph can return either a tool call or a natural language resp
 
 We can now see the actual output when our tools are used, I've used the tools I defined myself before and I can now see the outputted temperature in New York through the tool call of the weather tool and the current date-time through the tool call of the date-time tool, as well as the results from all the arithmetic functions.
 
+<img width="1743" height="931" alt="image" src="https://github.com/user-attachments/assets/4ae5dfb1-0ee1-464a-95d6-c9d21a7af668" />
+In this image we have utilized Langgraph studio to see the graph. Here we can also input messages and see the result of the tool calling LLM, where it chooses which tool to call to give the correct output. Here you can see the outputs from calling the tools to see current date-time and the weather in a user specified location. These are custom tools that I made. 
+
+<img width="1807" height="918" alt="image" src="https://github.com/user-attachments/assets/f8123573-902c-44fd-b008-d538f8fa267e" />
+In this image you can see 2 of the arithemetic tools I defined. I also defined seperate tools for addition and subtraction as seen in the jupyter notebook file.
+
+
 ---
 
 ## **VIDEO 6- Agent**
@@ -83,6 +90,7 @@ Langchain uses checkpointers to save the GraphState after each step. We use the 
 
 
 Here we can see it in langgraph studio where we input a question that calls some tools that I have defined and gives an output, then we ask it to do further operations on the previous output and it is able to do that with its memory.
+
 
 
 
