@@ -48,6 +48,15 @@ We've seen that a graph can return either a tool call or a natural language resp
 
 We can now see the actual output when our tools are used, I've used the tools I defined myself before and I can now see the outputted temperature in New York through the tool call of the weather tool and the current date-time through the tool call of the date-time tool, as well as the results from all the arithmetic functions.
 
+## **VIDEO 6- Agent**
+
+[agentVID5MOD1.ipynb](./Module1/agentVID5MOD1.ipynb)
+
+We can make simple modifications to the router to turn it into popular agent architecture, ReAct. The model calls specific tools as previously seen, and now the tool output is passed back to the model. The model then decides what to do next with the tool output ( call another tool or respond directly). 
+
+I have first defined all the tools I previously used, basic arithemetic (addition, subtraction, multiplication, division) and the environmental variable tools (current date, current time, fetching weather of specific location). I have also added more arithemtic tools (square of input, root of input, and modulo). I have attatched screenshots of the tracing on langsmith for 2 queries I ran, one was a series of arithemetic operations and the other was a series of requests about date/time/weather. Langsmith tracing showcases the multiple tool calls before the output.
+
+
 
 
 
