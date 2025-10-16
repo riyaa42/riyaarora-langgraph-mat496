@@ -25,12 +25,22 @@ There are some concepts defined. A state is the object that we pass between the 
 
 In this file, I've made a change so that the program checks the current date-time and if its before evening routes to saying that its awake, and if its post evening then states that its sleepy. We construct a graph by defining a START node and an END node, before we invoke it.
 
+---
+
+## **VIDEO 4- Chain**
+
+[chainVID4MOD1.ipynb](./Module1/chainVID4MOD1.ipynb)
+
+In this video, we see how to build a chain integrating chat messages, chat models and tool calls.
+Langchain has different message types that are used to capture different roles in conversations. I have used gemini instead of OpenAI and have configured my code according to that. I learnt how to pass messages as inputs to chat models, and how to bind tools to chat models, and how to produce tool called outputs. I've learnt that we can use messages in our graph state.
+
+We don't want messages to be overwritten in the state, instead we want them to append to the state so as to maintain message history. For this, we use reducers. Reducers allow us to specify how we want state updates to happen instead of just overriding. 
+
+We've built a graph with MessageState and tool calling. For this module, I added on to the multipying tool and added division, addition, and subtraction tools as well. Other than that, I added a tool to tell current date-time, as well as a tool that tells the weather in a specified location. 
 
 
 
 
-
-construct a graph by defining a START node and an END node, before we invoke it.
 
 
 
