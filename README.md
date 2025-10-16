@@ -56,6 +56,14 @@ We can make simple modifications to the router to turn it into popular agent arc
 
 I have first defined all the tools I previously used, basic arithemetic (addition, subtraction, multiplication, division) and the environmental variable tools (current date, current time, fetching weather of specific location). I have also added more arithemtic tools (square of input, root of input, and modulo). I have attatched screenshots of the tracing on langsmith for 2 queries I ran, one was a series of arithemetic operations and the other was a series of requests about date/time/weather. Langsmith tracing showcases the multiple tool calls before the output.
 
+## **VIDEO 7- Agent**
+
+[agent-memoryVID7MOD1.ipynb](./Module1/agent-memoryVID7MOD1.ipynb)
+
+In this section, I learnt how to extend the previous agent architecture to include memory. We run the previous agent and try to ask a follow up arithemetic question on the output of the previous result. This doesn't work because there is no memory saved of previous outputs. There is no persistence between executions.
+
+Langchain uses checkpointers to save the GraphState after each step. We use the MemorySaver checkpointer, which is an in-memory key-value store for GraphState. We compile the graph with the checkpointer, which gives memory to the graph. I have used the agent I established in the previous file and demonstrated that the agent retains memory and can call tools and perform the arithmetic functions on a previous output given by the agent that it remembers. 
+
 
 
 
