@@ -16,7 +16,7 @@ There was no code for this video.
 
 ## **VIDEO 2- Simple Graph**
 
-[simple-graphVID2MOD1.ipynb](./simple-graphVID2MOD1)
+[simple-graphVID2MOD1.ipynb](./Module1/simple-graphVID2MOD1.ipynb)
 
 
 In this video, we built a simple graph with 3 nodes and 1 conditional edge. The first node has a conditional edge that either goes to node 2 or node 3.
@@ -31,5 +31,6 @@ In this file, I've made a change so that the program checks the current date-tim
 
 
 construct a graph by defining a START node and an END node, before we invoke it.
+
 
 
