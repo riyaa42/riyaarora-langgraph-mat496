@@ -64,6 +64,11 @@ In this section, I learnt how to extend the previous agent architecture to inclu
 
 Langchain uses checkpointers to save the GraphState after each step. We use the MemorySaver checkpointer, which is an in-memory key-value store for GraphState. We compile the graph with the checkpointer, which gives memory to the graph. I have used the agent I established in the previous file and demonstrated that the agent retains memory and can call tools and perform the arithmetic functions on a previous output given by the agent that it remembers. 
 
+<img width="1755" height="930" alt="image" src="https://github.com/user-attachments/assets/82f4345f-31f7-483e-86ae-f0668da36c7b" />
+<img width="1808" height="926" alt="image" src="https://github.com/user-attachments/assets/ce75e546-c9fa-4adf-95f7-cccbd0088ea3" />
+
+
+Here we can see it in langgraph studio where we input a question that calls some tools that I have defined and gives an output, then we ask it to do further operations on the previous output and it is able to do that with its memory.
 
 
 
