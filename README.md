@@ -38,6 +38,18 @@ We don't want messages to be overwritten in the state, instead we want them to a
 
 We've built a graph with MessageState and tool calling. For this module, I added on to the multipying tool and added division, addition, and subtraction tools as well. Other than that, I added a tool to tell current date-time, as well as a tool that tells the weather in a specified location that the user mentions. I have also changed the messages passed to the state. 
 
+---
+
+## **VIDEO 5- Router**
+
+[routerVID5MOD1.ipynb](./Module1/routerVID5MOD1.ipynb)
+
+We've seen that a graph can return either a tool call or a natural language response This is a router where a chat model routes between either a direct response or a tool call based on user input. Now I've extend the previous learnings in the file to add a node that calls the tool itself. I've also added a conditional edge that will look at the chat model output and rooute to our tool calling node or end if no tool call is performed.
+
+We can now see the actual output when our tools are used, I've used the tools I defined myself before and I can now see the outputted temperature in New York through the tool call of the weather tool and the current date-time through the tool call of the date-time tool, as well as the results from all the arithmetic functions.
+
+
+
 
 
 
