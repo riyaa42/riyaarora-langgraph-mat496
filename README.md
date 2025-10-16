@@ -27,6 +27,16 @@ In this file, I've made a change so that the program checks the current date-tim
 
 ---
 
+## **VIDEO 3- Langgraph Studio**
+
+We learnt how to utilize langgraph studio, which is an IDE for building, visualizing, and debugging AI agent workflows made with LangGraph. We can see visual graphs with all the nodes and see how they process inputs/outputs more clearly. We need a studio folder in our directory that has a langgraph.json file in it which has the graphs that we want to see and our .env file. I made a copy of my jupyter notebook .ipynb file into .py files to save in the studio folder in my directory and then ran the command to view langgraph studio. We can see what each node does and which node is running real time in the studio.
+
+<img width="1768" height="907" alt="image" src="https://github.com/user-attachments/assets/5ac32ca2-e0b2-468a-95ff-673a16bbd142" />
+
+There is no code in this video so i just interacted with langgraph studio. Here in the image you can see at my input of the GraphState the output gives me the line "I am sleepy" this is because my code in the relevant simple-graph file, at node 1 the program checks the current date-time of the system and if it is after evening it routes it to the node to say the phrase "I am sleepy". In my jupyter notebook file you can see when I ran the code intitially the graph gave "I am awake" as it was before 6pm.
+
+---
+
 ## **VIDEO 4- Chain**
 
 [chainVID4MOD1.ipynb](./Module1/chainVID4MOD1.ipynb)
@@ -48,6 +58,8 @@ We've seen that a graph can return either a tool call or a natural language resp
 
 We can now see the actual output when our tools are used, I've used the tools I defined myself before and I can now see the outputted temperature in New York through the tool call of the weather tool and the current date-time through the tool call of the date-time tool, as well as the results from all the arithmetic functions.
 
+---
+
 ## **VIDEO 6- Agent**
 
 [agentVID6MOD1.ipynb](./Module1/agentVID6MOD1.ipynb)
@@ -55,6 +67,8 @@ We can now see the actual output when our tools are used, I've used the tools I 
 We can make simple modifications to the router to turn it into popular agent architecture, ReAct. The model calls specific tools as previously seen, and now the tool output is passed back to the model. The model then decides what to do next with the tool output ( call another tool or respond directly). 
 
 I have first defined all the tools I previously used, basic arithemetic (addition, subtraction, multiplication, division) and the environmental variable tools (current date, current time, fetching weather of specific location). I have also added more arithemtic tools (square of input, root of input, and modulo). I have attatched screenshots of the tracing on langsmith for 2 queries I ran, one was a series of arithemetic operations and the other was a series of requests about date/time/weather. Langsmith tracing showcases the multiple tool calls before the output.
+
+---
 
 ## **VIDEO 7- Agent**
 
@@ -69,6 +83,7 @@ Langchain uses checkpointers to save the GraphState after each step. We use the 
 
 
 Here we can see it in langgraph studio where we input a question that calls some tools that I have defined and gives an output, then we ask it to do further operations on the previous output and it is able to do that with its memory.
+
 
 
 
