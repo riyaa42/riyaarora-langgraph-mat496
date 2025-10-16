@@ -1,0 +1,12 @@
+##MODULE 1
+##VIDEO 1- Motivation
+
+A solitary language model is fairly limited because it doesn't have access to multi-step workflows. Which is why a lot of LLM applications use a control flow with steps before and after LLM calls, like including tool calls, retrieval calls etc.
+
+The control flow is called a chain. An Agent then, is a control flow thats actually defined by the LLM. Its flexible and the LLM chooses what steps to take depending on the problem or situation faced instead of a procedural step-by-step fixed routine.
+
+There are many kinds of Agents. A router is an agent that controls a single step in the flow. A fully autonomous agent can pick any sequence of steps. It can also generate its own step. A drawback is that the applications reliability decreases inversely with more control given to the LLM.
+
+Langgraph gives you a way to implement custom control flows in the form of graphs with nodes connected by edges.
+
+There was no code for this video.
