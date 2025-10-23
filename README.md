@@ -91,8 +91,21 @@ Langchain uses checkpointers to save the GraphState after each step. We use the 
 
 Here we can see it in langgraph studio where we input a question that calls some tools that I have defined and gives an output, then we ask it to do further operations on the previous output and it is able to do that with its memory.
 
+---
 
+# **MODULE 2**
 
+## **VIDEO 2- State Schema**
+
+[state-schema.ipynb](./Module2/state-schema.ipynb)
+
+In module one, we've covered how to make oan agent with memory that can use tools and can decide what to do next based on tool call outputs. In this video, we extend about this and go deeper into the state.  When defining a langgraph StateGraph, you use aa state schema, which comprimises of the structure and the type of data the graph will use. We have previously been using TypeDict which is a dictionary with type hints as keys that are not enforcable in runtime. 
+
+We use TypeDict first where I have *changed*:
+
+- Defined a 2 level decision tree with several nodes based on selecting a genre of book to read + time taken to read, the decison tree first randomly selects a node out of 3 nodes for book genres (horror, fantasy, sci-fi) and then theres 2 more nodes that are connected individually to all three of these nodes that define a short reading time or a long reading time. 
+
+Now I have used dataclass and pydantic to define the same graph that I have modified with more nodes and branches. DataClass, used to define a class of structured data, also does not enforce type hints at runtime, which is why we use Pydantic when we want data validation.
 
 
 
