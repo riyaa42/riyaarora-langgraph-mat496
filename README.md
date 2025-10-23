@@ -123,6 +123,25 @@ We also learn more about MessagesState and defining a custom one, add_messages i
 
 The changes I have made are changing the key from foo to book_title which is a string. The rest of the code is modified to show the functionality of reducers using string and not int. The graph nodes are defined to be about tracking books and genres in a library, and the reducers show the book list being appended. The messafesstate section is modified to include a thread of conversation about book reccomendation.
 
+---
+
+## **VIDEO 3- Multiple Schemas**
+
+[multiple-schemas.ipynb](./Module2/multiple-schemas.ipynb)
+
+All graphs nodes usually contain a single schema, but there are cases where multiple schemas may be needed. Innternal nodes may pass information that is not required to the graph's input/output, or we might want to use different input/output schemas for the graph.
+So in this video we learn different ways to customise a schema.
+
+First, we learn about Private State, which is used when needed as part of an intermediate logic but not as part of final input/output. PrivateState is not in the overall state thats passed back to the user but we can see that the intermediate nodes use PrivateState to communicate.
+
+We also learn about having a specific input/output schema. These work as filters on the overall state that specify what you want as the input and the output to be. Here we just want the question and answer and want the intermediate thinking node hidden from the user, which is what we implement here.
+
+I have *changed* a couple things. In private state, I have added more nodes with intermediate arithemetic operations that sequentially perform operations. In the input/output schema section, I have customised the messages.
+
+
+
+
+
 
 
 
