@@ -107,10 +107,21 @@ We use TypeDict first where I have *changed*:
 
 Now I have used dataclass and pydantic to define the same graph that I have modified with more nodes and branches. DataClass, used to define a class of structured data, also does not enforce type hints at runtime, which is why we use Pydantic when we want data validation.
 
+---
 
+## **VIDEO 2- State Reducers**
 
+[state-reducers.ipynb](./Module2/state-reducers.ipynb)
 
+In this video we learn about state reducers which specify how state updates are performed on specific keys or channels in the schema. Whenever we invoke a graph, langgraph doesn't know the preffered way to update the state, so the default method is to override the value from before. We see this in an example of a branching graph where the key can only recieve one value per step, but since parallel processes are trying to occur and overwrite the value at the same time, an error occurs.
 
+This is why we use Annotated key to handle multiple values. We apply the annotated type to our key and include a reducer function, which performs a list concatenation instead of overwriting. So when 2 processes occur at once, they are not trying to overwrite at the same time but just append, this is useful for performing state updates simultaneously.
+
+We've also learnt to define custom reducers to handle specific inputs like edge cases (null value here)
+
+We also learn more about MessagesState and defining a custom one, add_messages is a built in reducer.
+
+The changes I have made are changing the key from foo to book_title which is a string. The rest of the code is modified to show the functionality of reducers using string and not int. The graph nodes are defined to be about tracking books and genres in a library, and the reducers show the book list being appended. The messafesstate section is modified to include a thread of conversation about book reccomendation.
 
 
 
