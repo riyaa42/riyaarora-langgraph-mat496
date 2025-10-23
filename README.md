@@ -158,6 +158,22 @@ We see in this screenshot of the trace that the input to the chatmodel excludes 
 
 This limited the tokens used. 
 
+---
+
+## **VIDEO 5- Chatbot with Summarizing Messages and Memory**
+
+[chatbot-summarization.ipynb](./Module2/chatbot-summarization.ipynb)
+
+In this video we learn how to utilize LLM's to produce running summaries of the conversation. This helps us compress and preserve information better than filtering or trimming the messages. The summary is stored in the state and massively reduces token usage. If a summary is present it is added to the messages, if not, it just takes what is in messages and invokes the model.If there is a summary the existing summary is added to the summary prompt, otherwise, a summary of the conversation is created. Theres a custom edge added that only allows creation of summary if there are more than 6 messages. 
+
+In this file, I did not want to use OpenAI so I have configured the code to use gemini. Other than that, I have also changed the message thread to be about discussing a particular character in a book series. 
+
+<img width="974" height="211" alt="image" src="https://github.com/user-attachments/assets/ad6b4939-ea0a-428c-889f-66537489c581" />
+In this screenshot we can see the multiple traces formed that are linked together in the summary. 
+<img width="1229" height="695" alt="image" src="https://github.com/user-attachments/assets/f53389a5-a0fd-4fed-8261-1aa466d5d98c" />
+
+<img width="1219" height="699" alt="image" src="https://github.com/user-attachments/assets/d4d67ede-b36a-4e1d-9761-1bffaf9d016b" />
+
 
 
 
