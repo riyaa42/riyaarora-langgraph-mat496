@@ -138,6 +138,26 @@ We also learn about having a specific input/output schema. These work as filters
 
 I have *changed* a couple things. In private state, I have added more nodes with intermediate arithemetic operations that sequentially perform operations. In the input/output schema section, I have customised the messages.
 
+---
+
+## **VIDEO 4- Trim Filter Messages**
+
+[trim-filter-messages.ipynb](./Module2/trim-filter-messages.ipynb)
+
+Now we know how to customize graph states, define state reducers, and use multiple schemas. Now from this video we will start building towards a chatbot that has long term memory. 
+
+We can past a simple list of messages to the chat model and run our chatmodel in a simple graph using MessagesState. The issue here is managing long running conversations with the agent. It is very token expensive which is costly.  So to solve this problem, we can use the Remove_Message and add_messages reducer. We define a function that takes in the state and deletes all but the last 2 most recent messages.
+We can also filter the messages and send a subset of the message list. We can also limit token usage.
+
+I have made extensive changes. Firstly, as I did not want to use OpenAI I've used gemini-2.0-flash throughout the module. Secondly, I have modified this agent to be catered to book reccomendation questions and answers based on the user's taste.
+
+<img width="1237" height="698" alt="image" src="https://github.com/user-attachments/assets/9bff04d1-cea9-4483-a1c1-858dac4faece" />
+We see in this screenshot of the trace that the input to the chatmodel excludes the previous history and only includes the last input. 
+
+<img width="1215" height="697" alt="image" src="https://github.com/user-attachments/assets/6cf2feb4-2bba-4018-b68a-55d2d5548804" />
+
+This limited the tokens used. 
+
 
 
 
