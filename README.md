@@ -174,6 +174,15 @@ In this screenshot we can see the multiple traces formed that are linked togethe
 
 <img width="1219" height="699" alt="image" src="https://github.com/user-attachments/assets/d4d67ede-b36a-4e1d-9761-1bffaf9d016b" />
 
+---
+
+## **VIDEO 6- Chatbot with Summarizing Messages and External Memory**
+
+[chatbot-external-memory.ipynb](./Module2/chatbot-external-memory.ipynb)
+
+Previously, we've made a chatbot that supports long running conversations either by using in-memory checkpointers that allows us to persist the memory of the conversation or by using summarizations if the chat messages which reduces overall token usage. The drawback of this is that it only persists during the notebook's session. So in this video we have learnt how to use an external memory through SQLite. Its a small and fast database that we utilise to work with external database checkpointers. We can see that it allows conversation history and summaries to persist across notebooks or kernel restarts, which creates a better long term memory. 
+
+Here also I've configured the code to use Gemini instead of OpenAI and have customized the conversation threads.
 
 
 
