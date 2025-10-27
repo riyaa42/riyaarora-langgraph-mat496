@@ -244,6 +244,8 @@ here we see we fork the input and enter a different value, this means we manuall
 ![output](image-2.png)
 output is here after we manually approve due to human-in-the-loop 
 
+---
+
 ## **VIDEO 4- Dynamic Breakpoints**
 
 In this video we learn about cases where we want the graph to be able to interrupt itself based on some condition with the state of the graph. We can use NodeInterrupt for it. After the state is paused and when we want to continue, we juse update the state.
@@ -259,3 +261,19 @@ Here it is halted due to the keyword
 ![image3](image-5.png)
 here it is halted due to char limit
 
+---
+
+## **VIDEO 5- Time Travel**
+
+Now in this video we learnt about how langgraph supports debugging by viewing, replaying and forking prior states. We've used the same agent we previously used in the module. 
+
+We've learned about Browsing History, where we can use get_state to get the State Snapshot, as in the checkpoint of the current state of the graph. We also get metadata. We can also use get_state_history to look at the history of states at every step that the agent took. Checkpoints just wrap the state and relevant metadata at every step, so when we're looking at State Snapshots we're looking at the checkpoints essentially. 
+
+We also learnt about Replaying, where the concept is that we can replay the agent from any of its prior steps. If we pass in a thread id and a checkpoint id then we can rewind to any checkpoint within the thread. 
+
+Then we finally learnt about Forking, where we run from the same step but from a different input. To rewind and fork a previous checkpoint, we update state, pass the checkpoint id, then we get a forked checkpoint that's created. Essentially, if we pass in a State Snapshot thats never been executed before, then instead of replaying (what it would do if it had been executed before), it gets forked. When we're forking, we also provide id of the initial checkpoint, so it overwrites it.
+
+![image1](image-6.png)
+Here we can see the place in langgraph studio to edit the values of the state when adding an interrupt at assistant and after chaning the values forking the input. 
+
+![image2](image-7.png)
