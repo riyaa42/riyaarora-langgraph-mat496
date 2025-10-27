@@ -207,6 +207,29 @@ I've used gemini through langchain instead of OpenAI throughout the code and som
 
 <img width="1193" height="778" alt="image" src="https://github.com/user-attachments/assets/0d09cea4-c91b-45d8-a51e-c15af968955a" />
 
+---
+
+## **VIDEO 2- Breakpoints**
+
+In this video we learn how to implement breakpoints so that we can implement the concept of human-in-the-loop. This is specifically helpful because-
+-We can interrupt the agent, pass on the state to the user, and allow the user to approve the action before the tool is called
+-We can modify the state
+-We can do better debugging
+
+Here we're implementing breakpoints before tool calls. The current state before the tool call with the args will be given to the user to approve before moving on to the actual tool calling.
+
+In my file, as previously done, I've used gemini through langchain instead of OpenAI. I've added several tools other than the standard multiplication, division and addition tools, I've completed the set of basic arithemetic operations and added a subtraction tool. Other than this I have also added tools for more mathematical functions, for modulo, square, and square root. I've also added some tools related to environmental factors, namely the date-time tool to tell current date and time, and a tool which takes user input of a location and outputs the weather in that location through the utilization of Open-meteo API. I've demonstrated the functioning of these tools both in the jupyter notebook as well as in the langgraph studio screenshots. You can also see that I've worked the breakpoints in a way so that they're called multiple times for inputs with mutliple tool calls befor each tool call. 
+
+<img width="1238" height="706" alt="image" src="https://github.com/user-attachments/assets/b4aaf183-246c-4ade-97e0-ae1fc7ca42de" />
+<img width="1231" height="700" alt="image" src="https://github.com/user-attachments/assets/ea904264-0189-49ae-8ec8-24d9e56a534b" />
+Here we can see the tool calling with breakpoints being visible before each tool 
+
+<img width="1225" height="701" alt="image" src="https://github.com/user-attachments/assets/09c03dd3-3ac0-47df-a38a-fcc8930ba2ea" />
+<img width="1235" height="698" alt="image" src="https://github.com/user-attachments/assets/2ed5ced9-ed71-4ce8-84aa-d86e916d80d8" />
+demonstration of some other tools
+
+
+
 
 
 
