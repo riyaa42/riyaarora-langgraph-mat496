@@ -273,6 +273,8 @@ We also learnt about Replaying, where the concept is that we can replay the agen
 
 Then we finally learnt about Forking, where we run from the same step but from a different input. To rewind and fork a previous checkpoint, we update state, pass the checkpoint id, then we get a forked checkpoint that's created. Essentially, if we pass in a State Snapshot thats never been executed before, then instead of replaying (what it would do if it had been executed before), it gets forked. When we're forking, we also provide id of the initial checkpoint, so it overwrites it.
 
+Here I've changed the tool set as previously done also, to add all basic mathematical tools, and also tools for square, square root, and modulus, along with tools for finding current date-time , and a tool for finding the weather at a user specified location using open meteo API. I've also changed how the concepts are demonstrated in the notebook by using a call that prompts multiple tool calls with 1 input so I can more effectively see how concepts like browsing history, replaying and forking work This is also visible in the attatched screenshots.
+
 ![image1](image-6.png)
 Here we can see the place in langgraph studio to edit the values of the state when adding an interrupt at assistant and after chaning the values forking the input. 
 
