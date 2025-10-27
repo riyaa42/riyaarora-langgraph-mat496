@@ -243,3 +243,19 @@ here we see we fork the input and enter a different value, this means we manuall
 
 ![output](image-2.png)
 output is here after we manually approve due to human-in-the-loop 
+
+## **VIDEO 4- Dynamic Breakpoints**
+
+In this video we learn about cases where we want the graph to be able to interrupt itself based on some condition with the state of the graph. We can use NodeInterrupt for it. After the state is paused and when we want to continue, we juse update the state.
+
+In this I added an addition step that interrupts when a keyword such as "stop", "exit", etc is used, I've also demonstrated this in the screenshots and the file. 
+
+![image1](image-3.png)
+Here we can see that the input "hi" doesn't pause the state as it doesn't contain the specified keywords and is under 5 chars
+
+![image2](image-4.png)
+Here it is halted due to the keyword
+
+![image3](image-5.png)
+here it is halted due to char limit
+
