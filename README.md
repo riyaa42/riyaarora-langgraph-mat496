@@ -185,8 +185,27 @@ Previously, we've made a chatbot that supports long running conversations either
 Here also I've configured the code to use Gemini instead of OpenAI and have customized the conversation threads.
 
 
+---
+
+# **MODULE 3**
+
+## **VIDEO 1- Streaming**
 
 
+In the previous module we've learnt about state and memory and built a chatbot with external memory that can sustain long running conversations. We're going to  be learning about human-into-the-loop. In this video, we learn  about streaming.
+
+Theres two different ways of streaming in langgraph .stream and .astream. The values node streams the state of the graph after each node is called and the updates node streams updates to the state of the graph after each node is called.
+
+We can use .astream_events to stream back events as they happen in the model.
+An event contains the following keys:
+1. event:type of event being emitted
+2. name:name of event
+3. data: data associated with the event
+4. metadata: has the node emitting the event
+
+I've used gemini through langchain instead of OpenAI throughout the code and some tweaks have been made to accomodate this change. Other than that, I have incorporated token tracking, and time tracking in the code as well. I've also created a seperate kernel that compares the two streaming modes, Values and Updates in terms of events and time taken, for an inputted message. I have also custimized all conversation topics.
+
+<img width="1193" height="778" alt="image" src="https://github.com/user-attachments/assets/0d09cea4-c91b-45d8-a51e-c15af968955a" />
 
 
 
