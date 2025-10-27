@@ -229,8 +229,17 @@ Here we can see the tool calling with breakpoints being visible before each tool
 demonstration of some other tools
 
 
+---
 
+## **VIDEO 3- Editing State and Human Feedback**
 
+We learnt in the previous video to use breakpoints to stop the graphs and approve certain actions. Now in this video we'll learn how to edit the GraphState once its stopped. We use breakpoints to modify the state of the graph using update_state(). The Langgraph Studio UI also gives us the ability to add interrupts. I've added an additional interrupt at assistant. I've also maintained my previous changes of several new tools and using gemini instead of OpenAI.
 
+We also learned about adding human feedback to perform state updates, by adding a node that serves as a placehodler for human feedback. Adding this in the loop means that the user can add feedback directly to the state. 
 
+![langgraph studio screenshot](image.png)
+![screenshot 2](image-1.png)
+here we see we fork the input and enter a different value, this means we manually added a breakpoint 
 
+![output](image-2.png)
+output is here after we manually approve due to human-in-the-loop 
