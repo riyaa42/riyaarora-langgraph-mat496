@@ -302,3 +302,22 @@ Here I've made several changes, first of all for learning about parallelized pro
 
 ![image1](image-9.png)
 search that pulls documents from pubmed as well as the preset wikipedia and websearch functionality.
+
+---
+
+## **VIDEO 2- Sub-Graphs**
+
+[parallelization.ipynb](./Module4/parrallelization.ipynb)
+
+
+We cover another important controllability topic in this video which is sub-graphs. They allow us to create and manage different states within different parts of our graphs. This is useful for multiagent systems like teams of agents that have their own state. We have an example that accepts logs, which performs two seperate sub-tasks by different agents, namely:
+1. Summarize Logs
+2. Find failure modes
+These operations are more smoothlyy performed in two seperate sub-graphs. We learn about how the parent/entry graph connect and communicate with the 2 sub-graphs in terms of state, and vica-versa. This is done with overlapping keys. Essentially, the key(s)should be present in both the sub-graphs and the parent graph. Since both subgraphs might be writing to the same key, we use a reducer for those scenarios. Both sub-graphs' output state will contain all their keys even if they're unmodified and they're returned as input to the entry graph, which means there will be collisions. To avoid this, we use output state schemas which do not contain the colliding data and we use reducers for common keys that we want to return to the entry graph.
+
+In this notebook following the structure I have changed the graphs completely to make  a library book management system that analyzes checkout logs through two parallel sub-graphs: one for overdue analysis (identifying books with late fees and patterns/trends) and another for recommendation analysis (identifying popular books and creating acquisition reports). I have also added actual functionality to the code by integrating LLMs (gemini through langchain here, as in all my previous files) to generate summaries and nsights, instead of using placeholder/hardcoded text. The data structure was changed from generic logs to BookLog with fields like title, genre, checkout dates, ratings, and late fees, while maintaining the same parent-child graph architecture with overlapping state keys and reducers for the processed_logs field.
+
+![image1](image-10.png)
+![image2](image-11.png)
+Here are images of the langsmith trace.
+
