@@ -1,3 +1,10 @@
+---
+# **NOTE**
+
+For all files with langgraph studio demos, there is a /studio subfolder in the folder containing the .ipynb files that contains a langgraph.json file with the names of the files and grap and .py files of the matching .ipynb files containing the code relevant to the graphs, as this code is the same and copy pasted from my .ipynb files, I've not added it to the repo. All .py files have been edited alongside my .ipynb files with the exact same changes as its a copy-paste from my .ipynb files
+
+---
+
 # **MODULE 1**
 
 ## **VIDEO 1- Motivation**
