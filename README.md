@@ -344,3 +344,14 @@ Instead of producing jokes, I have changed the code to make a map-reduce pattern
 
  ![image2](image-13.png)
  langsmith trace of the jupyter notebook run 
+
+ ---
+
+## **VIDEO 4- Research Assistant**
+
+[research-assistant.ipynb](./Module4/research-assistant.ipynb)
+
+We have combined the concepts of memory, human loop, controllability, in a realistic multi-agent system thats capable of open-ended research. Just using an LLM straight up is unsuitable as you may want to provide specific sources for reasearch, and you may want a specific output format. We make a systemt that can do all this and automate it. We give the system access to arbitrary sources (web search tools) in the given example in the notebook. In this example, we take a topic given by the user and break it up into subtopics and assign an AI analyst to each topic. We use the concept of human-in-the-loop to refine the subtopics. Then, we orchestrate a diaglogue between each analyst and an expert that has access to the sources. All conversations are pulled together in one parallelized process, and MapReduce is run to bring the results together in the end, and is synthesized into a final report. 
+
+I have changed the original research agent and modified it by introducing a collaborative peer review mechanism where AI analysts critically evaluate each other's findings on "Large language models in medical diagnosis and patient care" which is the topic I have chosen. A conduct_peer_review node executes after parallel interview completion, where each analyst programmatically reviews colleagues' interview transcripts using structured LLM prompts, generating feedback stored in the peer_reviews state field. The write_sections function incorporates these reviews via enhanced section_writer_instructions prompts that explicitly address identified gaps, conflicts, and cross-research connections. A new write_executive_summary node then analyzes the consolidated report to assign confidence levels (HIGH/MEDIUM/LOW) to key findings based on source corroboration and analyst consensus. The ResearchGraphState TypedDict was extended with peer_reviews and executive_summary fields, while the graph was restructured with edges: conduct_interview → peer_review → write_sections and write_report → write_executive_summary → finalize_report. This creates a two-phase validation workflow combining peer validation with confidence assessment, improving research reliability. I have also added more research nodes that along with searching wikipedia and doing a web search through tavily, also query PubMed's biomedical literature database and arXiv's preprint repository parallely giving more diverse sources for the output. 
+
