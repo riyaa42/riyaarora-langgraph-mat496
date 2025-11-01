@@ -279,3 +279,19 @@ Here I've changed the tool set as previously done also, to add all basic mathema
 Here we can see the place in langgraph studio to edit the values of the state when adding an interrupt at assistant and after chaning the values forking the input. 
 
 ![image2](image-7.png)
+
+---
+
+# **MODULE 4**
+
+## **VIDEO 1- Parellelization**
+
+[parallelization.ipynb](./Module4/parrallelization.ipynb)
+
+
+In module 3 we've covered human in loop workflows and their usecases. In this module the end goal is to build a multi-agent research assistant. For this, in this video, we'll cover a LangGraph controllibility topic known as parallelization. First we're going to build a simple graph that over-writes the state in each step, then we use the same methodology to add an edge to make some edges run in parallel. This does not work as two different nodes are trying to write to the same state key at once, so for this, we need to use reducers that can aggregate the updates. We can also set the order of state updates using reducers. Then we've learnt how to make an example that uses LLMs  to answer a question and integrates gathering context from external sources.
+
+Here I've made several changes, first of all for learning about parallelized processes I've made a different graph with more nodes that run in paralell as well as subnodes. For the LLM application, along with the wikipedia and websearch, I've added another parallel search that searches for scientific and medical documents from PubMed. This functionality can be seen in an added kernel in the jupyter notebook file, as well as in the screenshot from langgraph studio. Other than this, I have also swapped to Gemini through langchain instead of OpenAI as I do not have credits for that. 
+
+![image1](image-9.png)
+search that pulls documents from pubmed as well as the preset wikipedia and websearch functionality.
