@@ -322,3 +322,25 @@ In this notebook following the structure I have changed the graphs completely to
 ![image2](image-11.png)
 Here are images of the langsmith trace.
 
+---
+
+## **VIDEO 3- Map-reduce**
+
+[map-reduce.ipynb](./Module4/map-reduce.ipynb)
+
+In this video, we learn that map-reduce is an efficient task decomposotion and parallel processing method. It has 2 phases:
+
+1. Map Phase: This takes some task and breaks it into a bunch of subtasks and does them all in parallel
+2. Reduce Phase: Aggregates the results from all parallelized subtasks and brings them back together. 
+
+In the example, map phase creates a set of jokes about a topic, reduce phase picks the best one. The overall state contains the topic and subject keys, and the joke key which has a reducer on it that appends to the list. We fan out a map to nodes that will produce jokes that will write to the list. After we have a subjects list that lives in the state, we iterate through the list, we use send() to send it to a particular node .
+
+ The map phase uses the send() API to create multiple copies of a node for each item in the list. The reducer phase combines the results together. The graph automatically creates the correct number of nodes removing the need to know how many items you need to have. We can also pass in arbitrary things as we decouple the state of the mapped node from the overall graph state.
+
+Instead of producing jokes, I have changed the code to make a map-reduce pattern for the output of a plot for a short-story/novella. The map phase takes a theme and generates three story premises, then fans out using the Send() API to create detailed plot ideas for each premise in parallel. The reduce phase evaluates all plots and selects the most compelling one using LLM judgment. I have used gemini instead of OpenAI and made the appropriate changes.
+
+ ![image1](image-12.png)
+ langgraph studio run (same example in jupyter notebook also)
+
+ ![image2](image-13.png)
+ langsmith trace of the jupyter notebook run 
